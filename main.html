@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- visual shapes -->
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <!-- visual shapes -->
+
+    <div class="rowDiv" style="margin: auto; align-items: center">
+      <button id="moodToggle">🌓</button>
+      <div class="colDiv">
+        <h2>Add Task:</h2>
+        <label for="taskInput"></label>
+        <input id="taskInput" type="text" /><br /><br />
+        <input type="date" id="date" /> <br />
+        <br />
+        <label for="importanceRange">Importance Range (0 => 10)</label><br />
+        <input
+          type="range"
+          id="importanceRange"
+          class="sliders"
+          min="0"
+        /><br />
+        <button id="addTasks">Add Task</button>
+      </div>
+      <br />
+
+      <div
+        class="colDiv"
+        id="textsView"
+        style="min-width: 600px; min-height: 200px"
+      >
+        <h3>Tasks:</h3>
+      </div>
+    </div>
+
+    <div class="rowDiv">
+      <div class="colDiv" id="MainBday_div" style="align-items: center">
+        <h2>BirthDay Reminder:</h2>
+        <button id="bday_button">🎉ADD A BIRTHDAY🎉</button>
+      </div>
+
+      <div class="popup-overlay" id="popupOverlay">
+        <div class="colDiv">
+          <label for="bday_name"><h2>Type A Name:</h2></label>
+          <input type="text" id="bday_name" name="bday_name" />
+          <br />
+
+          <label for="bday_date"><h2>Enter the B-DAY:</h2></label>
+          <input type="date" id="bday_date" name="bday_date" />
+
+          <button id="doneButton">Done</button>
+        </div>
+      </div>
+
+      <div class="colDiv">
+        <h3>Haters:</h3>
+        <p id="num"></p>
+        <button id="counter">Add one hater</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

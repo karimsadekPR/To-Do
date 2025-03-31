@@ -1,0 +1,163 @@
+body {
+    background: linear-gradient(135deg, #17153B, #2E236C);
+    font-family: monospace;
+    min-height: 100vh;
+
+}
+
+/* Floating Circles */
+.shape {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(10px);
+    animation: float 8s infinite alternate ease-in-out;
+}
+
+.shape:nth-child(1) {
+    top: 10%;
+    left: 5%;
+    width: 80px;
+    height: 80px;
+    animation-duration: 6s;
+}
+
+.shape:nth-child(2) {
+    bottom: 15%;
+    right: 10%;
+    width: 120px;
+    height: 120px;
+    animation-duration: 10s;
+}
+
+.shape:nth-child(3) {
+    top: 50%;
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    animation-duration: 7s;
+}
+
+/* Floating animation */
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-30px);
+    }
+}
+.colDiv{
+    align-items: center;
+    flex-direction: column;
+    border-radius: 22px;
+    font-size: 22px;
+    color: white;
+    margin: 45px;
+    padding: 10px;
+    width: auto;
+    height: fit-content;
+    background-color: #2E236C;
+    margin-bottom: 0px;
+}
+input{
+    border: #09122C 4px solid;
+    border-radius: 22px;
+    font-size: 22px;
+    max-width: none;
+}
+
+.rowDiv {
+    position: relative;
+    display: flex;  /* This is the magic */
+    flex-direction: row;
+    justify-content: center;  /* Centers the content horizontally */
+    flex-wrap: wrap;  /* Allows wrapping to the next row if items overflow */
+    width: 100vw;  /* Full width of the viewport */
+    height: fit-content;  /* Full height of the viewport */
+}
+
+
+button{
+    cursor: pointer;
+    background-color: #17153B;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 22px;
+    transition: background-color 0.5s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+}
+
+button:hover{
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    background-color: #2E236C;
+}
+
+.taskItem {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        border-radius: 15px;
+        padding: 10px;
+        gap: 8px;
+        transition: transform 0.2s ease-in-out;
+}
+
+.taskItem:hover {
+    transform: scale(1.02);
+}
+
+.taskText {
+    display: block; /* Ensures it takes the full width */
+    flex-grow: 1;
+    max-width: 55%; /* Adjust this based on your layout */
+    overflow-wrap: break-word; /* Breaks words if too long */
+    white-space: normal; /* Ensures it wraps */
+}
+
+.taskCheck {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.sliders{
+    color: blanchedalmond;
+    cursor: pointer;
+    width: 400px;
+}
+
+  .low { color: green; font-weight: bold; }
+  .moderate { color: orange; font-weight: bold; }
+  .high { color: red; font-weight: bold; }
+  
+#date{
+    width: auto;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+/* POPUPS STYLING */
+.popup-overlay {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+    
+    .popup-content {
+        text-align: center;
+    }
+    
