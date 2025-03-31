@@ -78,7 +78,7 @@ function addTaskToUI(taskText, importanceValue, dateValue_2,) {
     dateDisplay.className = "colDiv";
     
     const taskDate = document.createElement("span");
-    taskDate.textContent = dateValue_2 ? dateValue_2 : 'a7a';
+    taskDate.textContent = dateValue_2 ? dateValue_2 : 'not available';
     dateDisplay.append(taskDate);
 
     // Create importance label
@@ -98,9 +98,9 @@ function addTaskToUI(taskText, importanceValue, dateValue_2,) {
     };
 
     // Strike-through when checked
-    function checkingForDone(checked) {
-        list.style.textDecoration = checked ? "line-through" : "none";
-        list.style.opacity = checked ? "0.5" : "1";
+    function checkingForDone() {
+        list.style.textDecoration = checkbox.checked ? "line-through" : "none";
+        list.style.opacity = checkbox.checked ? "0.5" : "1";
         checked = !checked;
     };
     checkbox.onclick = checkingForDone
@@ -132,6 +132,7 @@ function getImportanceClass(value) {
 /*function showCallender(){
     
 }*/
+// A small haters counter
 hattersCount.textContent = `0`
 let counterNum = 0;
 counterBttn.onclick = function addhaters (){
